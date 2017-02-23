@@ -1,7 +1,6 @@
 class Flight(object):
     def __init__(self, flight_data):
         self.flight_data = flight_data
-        print self.flight_data
 
     def sale_total(self):
         return self.flight_data['saleTotal']
