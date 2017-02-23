@@ -7,9 +7,9 @@ class PyFlightTest(unittest.TestCase):
 
     def test_search(self):
         today = datetime.date.today()
-        # Assume we should find a flight 4 days from now.
+        # Assume we should find a flight to NYC 4 days from now.
         d = today + datetime.timedelta(days=4)
-        flight_api = PyFlight(api_key='AIzaSyDBcCNUlX2uYsDqzYpsEkg4FX1CFcZwA84')
+        flight_api = PyFlight(api_key='your_api_key')
         search = flight_api.search(params={
             'adult_count': 1,
             'origin': 'DUB',
