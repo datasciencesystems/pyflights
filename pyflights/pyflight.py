@@ -32,4 +32,20 @@ class PyFlight:
                 'solutions': params['solutions']
             }
         })
+        if not req.status_code == 200:
+            errors = req.json()
+            error_code = errors['error']['code']
+            message = errors['error']['message']
+            reason = errors['error']['errors'][0]['reason']
+            raise PyFlightException(error_code, reason, message)
         return req.json()
+
+
+class PyFlightException(Exception):
+    def __init__(self, status_code, reason, text):
+        self.status_code = status_code
+        self.reason = reason
+        self.text = text
+
+    def __str__(self):
+        return "PyFlights returned an error: %s - %s - %s" % (self.status_code, self.reason, self.text)
