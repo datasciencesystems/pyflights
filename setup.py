@@ -11,4 +11,10 @@ setup(name='pyflight',
       install_requires=[
           'requests',
       ],
+      classifiers=[
+          'Intended Audience :: Developers',
+          'License :: OSI Approved :: MIT License',
+          "Topic :: Software Development :: Libraries",
+          'Programming Language :: Python :: 2.7'
+      ],
       zip_safe=False)
