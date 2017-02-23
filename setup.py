@@ -8,7 +8,7 @@ setup(name='pyflight',
       author_email='ant0@protonmail.ch',
       license='MIT',
       packages=['pyflight', 'pyflight.models'],
-      keywords=['google flights', 'flights', 'api'],
+      keywords=['Google Flights', 'Flights', 'API', 'QPX Express Airfare API'],
       install_requires=[
           'requests',
       ],
