@@ -47,3 +47,21 @@ for results in search:
 | destination | Airport or city IATA designator of the destination.                                                                                         |
 | date        | Departure date in YYYY-MM-DD format.                                                                                                        |
 | solutions   | The number of solutions to return, maximum 500.                                                                                             |
+
+## Flight Model
+
+The flight class contains the following methods.
+
+| Method             | Description                                                                                                      |
+|--------------------|------------------------------------------------------------------------------------------------------------------|
+| sale_total         | The total price for all passengers on the trip, in the form of a currency followed by an amount, e.g. USD253.35. |
+| duration           | The duration of the slice in minutes.                                                                            |
+| booking_code_count | The number of seats available in this booking code on this segment.                                              |
+| flight_carrier     | The 2-letter IATA airline designator for the segment.                                                            |
+| flight_number      | The flight number.                                                                                               |
+| origin             | The leg origin as a city and airport.                                                                            |
+| destination        | The leg destination as a city and airport.                                                                       |
+| origin_terminal    | The terminal the flight is scheduled to depart from.                                                             |
+| origin_destination | The terminal the flight is scheduled to arrive at.                                                               |
+| departure_time     | The scheduled departure time of the leg, local to the point of departure.                                        |
+| arrival_time       | The scheduled time of arrival at the destination of the leg, local to the point of arrival.                      |
