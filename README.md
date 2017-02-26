@@ -37,6 +37,8 @@ for results in search:
     print 'Arrival Time: %s' % results.arrival_time()
 ```
 
+## Required Search Parameters
+
 | Parameter   | Description                                                                                                                                 |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | adult_count | The number of passengers that are adults.                                                                                                   |
