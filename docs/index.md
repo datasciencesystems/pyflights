@@ -37,3 +37,13 @@ for results in search:
     print 'Arrival Time: %s' % results.arrival_time()
 ```
 
+## Required Search Parameters
+
+| Parameter   | Description                                                                                                                                 |
+|-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| adult_count | The number of passengers that are adults.                                                                                                   |
+| origin      | Airport or city IATA designator of the origin.                                                                                              |
+| max_price   | Do not return solutions that cost more than this price. The currency is specified in ISO-4217. The format, in regex, is [A-Z]{3}\d+(\.\d+)? |
+| destination | Airport or city IATA designator of the destination.                                                                                         |
+| date        | Departure date in YYYY-MM-DD format.                                                                                                        |
+| solutions   | The number of solutions to return, maximum 500.                                                                                             |
