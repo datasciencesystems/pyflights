@@ -24,7 +24,7 @@ search = flight.search(params={
         'origin': 'DUB',
         'max_price': 'EUR500',
         'destination': 'GDN',
-        'date': '2017-02-23',
+        'date': 'enter departure date here',
         'solutions': 1
 })
 
