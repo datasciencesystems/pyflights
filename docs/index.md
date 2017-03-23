@@ -24,13 +24,13 @@ search = flight.search(params={
         'origin': 'DUB',
         'max_price': 'EUR500',
         'destination': 'GDN',
-        'date': '2017-02-23',
+        'date': 'enter departure date here',
         'solutions': 1
 })
 
 for results in search:
     print 'Sale total: %s' % results.sale_total()
-    print 'Airline: %s' % results.flight_airline()
+    print 'Flight carrier: %s' % results.flight_carrier()
     print 'Origin: %s' % results.origin()
     print 'Destination: %s' % results.destination()
     print 'Deparure Time: %s' % results.departure_time()
