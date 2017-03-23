@@ -1,4 +1,5 @@
 import requests
+import pprint
 from models import Flight
 
 
@@ -7,6 +8,9 @@ class PyFlight:
 
     def __init__(self, api_key):
         self.api_key = api_key
+
+    def validate_key(self):
+        pass
 
     def search(self, params):
         req = self._call(params)
@@ -32,6 +36,7 @@ class PyFlight:
                 'solutions': params['solutions']
             }
         })
+
         if not req.status_code == 200:
             errors = req.json()
             error_code = errors['error']['code']
