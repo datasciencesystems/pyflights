@@ -9,9 +9,6 @@ class PyFlight:
     def __init__(self, api_key):
         self.api_key = api_key
 
-    def validate_key(self):
-        pass
-
     def search(self, params):
         req = self._call(params)
         flights = []
