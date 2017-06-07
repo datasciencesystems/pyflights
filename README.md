@@ -48,7 +48,7 @@ for results in search:
 | date        | Departure date in YYYY-MM-DD format.                                                                                                        |
 | solutions   | The number of solutions to return, maximum 500.                                                                                             |
 
-## Flight Model
+## Flight
 
 The flight class contains the following methods.
 
