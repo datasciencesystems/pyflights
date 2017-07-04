@@ -1,6 +1,5 @@
 import requests
-import pprint
-from models import Flight
+from objects import Flight
 
 
 class PyFlight:
