@@ -12,7 +12,7 @@ Check out the [API documentation](https://developers.google.com/qpx-express/v1/t
 pip install pyflights
 ```
 
-## Developing Locally
+## Developing 
 
 ```
 git clone https://github.com/AnthonyBloomer/pyflights.git
