@@ -1,6 +1,6 @@
 # PyFlights
 
-A simple wrapper for the Google Flights search API.
+A Python library for the Google Flights search API.
 
 Create a new application in the [Google API Console](https://console.developers.google.com) to obtain an API key.  
 Check out the [API documentation](https://developers.google.com/qpx-express/v1/trips/search).
