@@ -50,47 +50,76 @@ Usage
 Required Search Parameters
 --------------------------
 
-+-----------------------------------+-----------------------------------+
-| Parameter                         | Description                       |
-+===================================+===================================+
-| adult_count                       | The number of passengers that are |
-|                                   | adults.                           |
-+-----------------------------------+-----------------------------------+
-| origin                            | Airport or city IATA designator   |
-|                                   | of the origin.                    |
-+-----------------------------------+-----------------------------------+
-| max_price                         | Do not return solutions that cost |
-|                                   | more than this price. The         |
-|                                   | currency is specified in          |
-|                                   | ISO-4217. The format, in regex,   |
-|                                   | is [A-Z]{3}\d+(.\d+)?             |
-+-----------------------------------+-----------------------------------+
-| destination                       | Airport or city IATA designator   |
-|                                   | of the destination.               |
-+-----------------------------------+-----------------------------------+
-| date                              | Departure date in YYYY-MM-DD      |
-|                                   | format.                           |
-+-----------------------------------+-----------------------------------+
-| solutions                         | The number of solutions to        |
-|                                   | return, maximum 500.              |
-+-----------------------------------+-----------------------------------+
++-----+----------------------------------------------------------------+
+| Par | Description                                                    |
+| ame |                                                                |
+| ter |                                                                |
++=====+================================================================+
+| adu | The number of passengers that are adults.                      |
+| lt_ |                                                                |
+| cou |                                                                |
+| nt  |                                                                |
++-----+----------------------------------------------------------------+
+| ori | Airport or city IATA designator of the origin.                 |
+| gin |                                                                |
++-----+----------------------------------------------------------------+
+| max | Do not return solutions that cost more than this price. The    |
+| _pr | currency is specified in ISO-4217. The format, in regex, is    |
+| ice | [A-Z]{3}:raw-latex:`\d`+(.:raw-latex:`\d`+)?                   |
++-----+----------------------------------------------------------------+
+| des | Airport or city IATA designator of the destination.            |
+| tin |                                                                |
+| ati |                                                                |
+| on  |                                                                |
++-----+----------------------------------------------------------------+
+| dat | Departure date in YYYY-MM-DD format.                           |
+| e   |                                                                |
++-----+----------------------------------------------------------------+
+| sol | The number of solutions to return, maximum 500.                |
+| uti |                                                                |
+| ons |                                                                |
++-----+----------------------------------------------------------------+
 
 Flight
 ------
 
 The flight class contains the following methods.
 
-+-----------------------------------+-----------------------------------+
-| Method                            | Description                       |
-+===================================+===================================+
-| sale_total                        | The total price for all           |
-|                                   | passengers on the trip, in the    |
-|                                   | form of a currency followed by an |
-|                                   | amount, e.g. USD253.35.           |
-+-----------------------------------+-----------------------------------+
-| duration                          | The duration of the slice in      |
-|                                   | minutes.                          |
-+-----------------------------------+-----------------------------------+
-
-.. _Google API Console: https://console.developers.google.com
-.. _API documentation: https://developers.google.com/qpx-express/v1/trips/search
++---------+------------------------------------------------------------+
+| Method  | Description                                                |
++=========+============================================================+
+| sale_to | The total price for all passengers on the trip, in the     |
+| tal     | form of a currency followed by an amount, e.g. USD253.35.  |
++---------+------------------------------------------------------------+
+| duratio | The duration of the slice in minutes.                      |
+| n       |                                                            |
++---------+------------------------------------------------------------+
+| booking | The number of seats available in this booking code on this |
+| _code_c | segment.                                                   |
+| ount    |                                                            |
++---------+------------------------------------------------------------+
+| flight_ | The 2-letter IATA airline designator for the segment.      |
+| carrier |                                                            |
++---------+------------------------------------------------------------+
+| flight_ | The flight number.                                         |
+| number  |                                                            |
++---------+------------------------------------------------------------+
+| origin  | The leg origin as a city and airport.                      |
++---------+------------------------------------------------------------+
+| destina | The leg destination as a city and airport.                 |
+| tion    |                                                            |
++---------+------------------------------------------------------------+
+| origin_ | The terminal the flight is scheduled to depart from.       |
+| termina |                                                            |
+| l       |                                                            |
++---------+------------------------------------------------------------+
+| origin_ | The terminal the flight is scheduled to arrive at.         |
+| destina |                                                            |
+| tion    |                                                            |
++---------+------------------------------------------------------------+
+| departu | The scheduled departure time of the leg, local to the      |
+| re_time | point of departure.                                        |
++---------+------------------------------------------------------------+
+| arrival | The scheduled time of arrival at the destination of the    |
+| _time   | leg, local to the point of arrival.                        |
++---------+------------------------------------------------------------+
