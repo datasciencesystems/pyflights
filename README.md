@@ -1,6 +1,9 @@
 # PyFlights
 
-A Python library for the Google Flights search API.
+A Python wrapper for the Google QPX Express Search API.
+
+**Note: The QPX Express API service will end on April 10, 2018. [Click here for more information.](https://developers.google.com/qpx-express/faq#EndOfServiceFAQs)**
+
 
 Create a new application in the [Google API Console](https://console.developers.google.com) to obtain an API key.  
 Check out the [API documentation](https://developers.google.com/qpx-express/v1/trips/search).
@@ -39,12 +42,12 @@ search = flight.search(params={
 })
 
 for results in search:
-    print 'Sale total: %s' % results.sale_total()
-    print 'Flight carrier: %s' % results.flight_carrier()
-    print 'Origin: %s' % results.origin()
-    print 'Destination: %s' % results.destination()
-    print 'Deparure Time: %s' % results.departure_time()
-    print 'Arrival Time: %s' % results.arrival_time()
+    print('Sale total: %s' % results.sale_total())
+    print('Flight carrier: %s' % results.flight_carrier())
+    print('Origin: %s' % results.origin())
+    print('Destination: %s' % results.destination())
+    print('Deparure Time: %s' % results.departure_time())
+    print('Arrival Time: %s' % results.arrival_time())
 ```
 
 ## Required Search Parameters

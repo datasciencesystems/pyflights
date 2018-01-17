@@ -1,1 +1,1 @@
-from flight import Flight
+from .flight import Flight

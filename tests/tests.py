@@ -17,20 +17,21 @@ class PyFlightTest(unittest.TestCase):
             'date': str(d),
             'solutions': 1
         })
-        self.assertEqual(search[0].origin(), 'DUB')
-        self.assertTrue(search[0].departure_time(), d)
-        self.assertTrue(float(search[0].sale_total()[3:]) <= 1200)
+        self.assertIsNotNone(search)
+        first = search[0]
+        self.assertEqual(first.origin(), 'DUB')
+        self.assertTrue(first.departure_time(), d)
+        self.assertTrue(float(first.sale_total()[3:]) <= 1200)
+        self.assertIsNotNone(first.sale_total())
+        self.assertIsNotNone(first.origin())
+        self.assertIsNotNone(first.origin_terminal())
+        self.assertIsNotNone(first.destination_terminal())
+        self.assertIsNotNone(first.flight_carrier())
+        self.assertIsNotNone(first.destination())
+        self.assertIsNotNone(first.departure_time())
+        self.assertIsNotNone(first.arrival_time())
+        self.assertIsNotNone(first.duration())
+        self.assertIsNotNone(first.booking_code_count())
+        self.assertIsNotNone(first.flight_number())
 
-        for results in search:
-            print 'Sale total: %s' % results.sale_total()
-            print 'Origin: %s' % results.origin()
-            print 'Origin Terminal: %s' % results.origin_terminal()
-            print 'Destination Terminal: %s' % results.destination_terminal()
-            print 'Carrier: %s' % results.flight_carrier()
-            print 'Destination: %s' % results.destination()
-            print 'Departure Time: %s' % results.departure_time()
-            print 'Arrival Time: %s' % results.arrival_time()
-            print 'Duration: %s' % results.duration()
-            print 'Booking Code Count: %s' % results.booking_code_count()
-            print 'Flight number: %s' % results.flight_number()
 

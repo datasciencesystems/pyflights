@@ -1,6 +1,5 @@
 import requests
-from objects import Flight
-
+from pyflights.objects import Flight
 
 class PyFlight:
     endpoint = 'https://www.googleapis.com/qpxExpress/v1/trips/search?'
@@ -32,7 +31,7 @@ class PyFlight:
                 'solutions': params['solutions']
             }
         })
-
+        print(req.json())
         if not req.status_code == 200:
             errors = req.json()
             error_code = errors['error']['code']

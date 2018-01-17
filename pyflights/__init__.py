@@ -1,1 +1,1 @@
-from pyflight import PyFlight
+from .pyflight import PyFlight
