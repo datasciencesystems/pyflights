@@ -2,6 +2,8 @@
 
 A Python library for the Google Flights search API.
 
+**Note: The QPX Express API service will end on April 10, 2018. [Click here for more information.](https://developers.google.com/qpx-express/faq#EndOfServiceFAQs)**
+
 Create a new application in the [Google API Console](https://console.developers.google.com) to obtain an API key.  
 Check out the [API documentation](https://developers.google.com/qpx-express/v1/trips/search).
 
